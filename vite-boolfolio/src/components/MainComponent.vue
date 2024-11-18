@@ -2,9 +2,30 @@
 
 import axios from 'axios';
 
+export default {
+name:"MainComponent",
+data(){
+    return {
+
+    }
+
+    },  methods:{
+
+}
+
+
+
+}
+
 </script>
 
-<template></template>
+<template>
+
+<h2 class="text-warning">Hello Vue</h2>
+
+</template>
 
 
-<style></style>
+<style lang="scss">
+
+</style>
