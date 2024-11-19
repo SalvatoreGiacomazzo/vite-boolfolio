@@ -1,12 +1,12 @@
 <script>
-import MainComponent from './components/MainComponent.vue';
+import CardList from './components/CardList.vue';
 import Footer from './components/partials/Footer.vue';
 import Header from './components/partials/Header.vue';
 
 export default {
   name: "Vite-Boolfolio",
   components: {
-    MainComponent, 
+    CardList, 
     Footer,
     Header
 },
@@ -20,7 +20,7 @@ export default {
  
  <Header />
 
- <MainComponent />
+ <CardList />
 
 <Footer />
 
