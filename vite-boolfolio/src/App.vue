@@ -1,10 +1,14 @@
 <script>
 import MainComponent from './components/MainComponent.vue';
+import Footer from './components/Footer.vue';
+import Header from './components/Header.vue';
 
 export default {
   name: "Vite-Boolfolio",
   components: {
     MainComponent, 
+    Footer,
+    Header
 },
 };
 
