@@ -16,7 +16,7 @@ getWantedList(){
   .then ((response) =>{
       
           this.wantedList = response.data.results
-   console.log(this.wantedList);
+  
    
   })
   .catch(function (error) {
@@ -48,7 +48,14 @@ getWantedList(){
             <img class="card-img-top" src="https://wallpapercave.com/wp/wp7819542.jpg" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{ wanted.name }} {{ wanted.last_name }}</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <p class="card-text"><strong>In the State of:</strong>{{wanted.nationality}}</p>
+      <p class="card-text"><strong>Most Used Device:</strong>{{wanted.device.device_type}}</p>
+      <p class="card-text">
+              <strong>Wanted for the crime of:</strong>
+                <ul>
+                  <li v-for="felony in wanted.felonies" :key="felony.id">{{ felony.name }}</li>
+                </ul>
+      </p>
               <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
           </div>
@@ -59,5 +66,11 @@ getWantedList(){
 
 
 <style lang="scss">
+
+
+ul{
+    list-style-type: none;
+}
+
 
 </style>
